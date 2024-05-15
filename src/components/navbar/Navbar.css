@@ -20,7 +20,7 @@
 .contact{
     display: flex;
     align-items: center;
-    gap: 25px;
+    gap: 30px;
 }
 
 .contact select{
@@ -34,7 +34,8 @@
     display: flex;
     align-items: center;
     gap: 6px;
-
+    color: #141311;
+    text-decoration: none;
 }
 .nav_bar .container{
     display: flex;
@@ -42,6 +43,7 @@
     align-items: center;
     padding: 15px 0px;
     border-bottom: 1px solid #E4E4E4;
+    margin-bottom: 30px;
 }
 
 .nav_bar .container>div{

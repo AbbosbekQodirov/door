@@ -1,0 +1,50 @@
+.filter {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-top: 1px solid #E4E4E4;
+    border-bottom: 1px solid #E4E4E4;
+    margin-bottom: 20px;
+}
+
+.filter ul {
+    display: flex;
+    list-style: none;
+    gap: 50px;
+    padding: 0px 20px;
+}
+
+.filter ul li {
+    padding: 14px 5px;
+    color: #BBBBBB;
+    border: 2px solid rgba(0, 0, 0, 0);
+    transition: all .3s ease;
+    cursor: pointer;
+}
+.filter ul li.active{
+color: black;
+    border-bottom: 2px solid black;
+}
+.filter ul li:hover{
+    color: black;
+    border-bottom: 2px solid black;
+}
+
+
+.filter button{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    padding: 8px 20px;
+    border: 1px solid #E4E4E4;
+    border-radius: 8px;
+    background-color: transparent;
+    color: #c3c3c3;
+    transition: all .3s ease;
+}
+
+.filter button:hover{
+    color: black;
+    border-color: black;
+}
