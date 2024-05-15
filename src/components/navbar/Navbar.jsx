@@ -8,7 +8,7 @@ function Navbar() {
       <div className="navbar">
         <div className="container">
           <div className="location">
-            <img src="./public/imgs/mark.svg" alt="" />
+            <img src="./imgs/mark.svg" alt="" />
             Toshkent
           </div>
           <div className="contact">
@@ -18,7 +18,7 @@ function Navbar() {
               <option value="">Uzb</option>
             </select>
             <Link>
-              <img src="./public/imgs/phone.svg" alt="" />
+              <img src="./imgs/phone.svg" alt="" />
               +998999999999
             </Link>
           </div>
@@ -29,18 +29,18 @@ function Navbar() {
           <h2>Eshik deraza</h2>
           <form action="">
             <input placeholder="Nomi va turi bo’yicha qidiruv" type="text" />
-            <img src="./public/imgs/search.svg" alt="" />
+            <img src="./imgs/search.svg" alt="" />
           </form>
           <div className="user_info">
             <div>
-              <img src="./public/imgs/cart.svg" alt="" />
+              <img src="./imgs/cart.svg" alt="" />
               <span>2</span>
             </div>
             <div>
-              <img src="./public/imgs/like.svg" alt="" />
+              <img src="./imgs/like.svg" alt="" />
             </div>
             <div>
-              <img src="./public/imgs/man.png" alt="" />
+              <img src="./imgs/man.png" alt="" />
             </div>
           </div>
         </div>
