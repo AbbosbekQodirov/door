@@ -8,6 +8,12 @@
     padding: 10px 0px;
 }
 
+.nav_bar .container a{
+    color: black;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
 
 .location{
     display: flex;

@@ -1,0 +1,126 @@
+.one_product .about_product{
+    display: flex;
+    gap: 50px;
+    padding-top: 18px;
+}
+
+.about_imgs .main_img{
+    background-color: #EDEEF2;
+    margin-bottom: 20px;
+}
+.about_title h1{
+    font-weight: 500;
+}
+
+.about_title{
+    position: relative;
+}
+
+.about_like{
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    border: 1px solid #BEBEBE;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.about_imgs .main_img img{
+    display: flex;
+    width: 600px;
+}
+
+.main_imgs{
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+.main_imgs img{
+    width: 100px;
+    cursor: pointer;
+}
+
+.about_info>div{
+    margin-bottom: 38px;
+}
+
+.about_info>div>p{
+    margin-bottom: 10px;
+    color: #606060;
+}
+.colors{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+.colors span{
+    width: 50px;
+    height: 50px;
+    border: 1px solid #5A5A5A;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.sizes{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.sizes span{
+    border: 1px solid #BEBEBE;
+    border-radius: 5px;
+    padding: 4px 10px;
+    cursor: pointer;
+}
+.sizes span.active{
+    background-color: #444444;
+    color: white;
+}
+
+.brands {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.brands span {
+    border: 1px solid #BEBEBE;
+    border-radius: 5px;
+    padding: 4px 10px;
+    cursor: pointer;
+}
+
+.brands span.active {
+    background-color: #444444;
+    color: white;
+}
+
+.about_btns{
+    display: flex;
+    gap: 10px;
+}
+
+.about_btns button{
+    background-color: #444444;
+    color: white;
+    padding: 10px 30px;
+    font-size: 18px;
+    border: none;
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 6px;
+}
+.about_btns button img{
+    display: flex;
+}
+.about_btns button:nth-child(2) {
+    background-color: #141311;
+}
