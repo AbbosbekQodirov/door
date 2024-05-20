@@ -68,6 +68,7 @@ function Home() {
         <section>
           <div className="container">
             <Title title="Mijozlar fikri" />
+            
           </div>
         </section>
       </main>

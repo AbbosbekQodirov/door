@@ -1,14 +1,17 @@
 import React from 'react'
 import "./Product.css"
+import { Link } from 'react-router-dom';
 
 function Product() {
   return (
     <div className="product">
       <div className="product_img">
         <div className="like">
-            <img src="./imgs/icons/like2.svg" alt="" />
+          <img src="./imgs/icons/like2.svg" alt="" />
         </div>
-        <img src="./imgs/photos/product1.png" alt="" />
+        <Link to={"/product/1"}>
+          <img src="./imgs/photos/product1.png" alt="" />
+        </Link>
       </div>
       <div className="product_info">
         <div className="desc">
