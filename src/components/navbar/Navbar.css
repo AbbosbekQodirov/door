@@ -80,3 +80,17 @@
     width: 100%;
     padding: 0px  5px;
 }
+
+.social{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.social img{
+    width: 24px;
+    display: flex;
+}
+.container_two{
+    padding: 20px 30px !important;
+}
