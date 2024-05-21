@@ -55,14 +55,20 @@
 .nav_bar .container>div{
     display: flex;
     align-items: center;
-    gap: 18px;
+    gap: 26px;
 }
-.nav_bar .container>div>div>span{
+.nav_bar .container>div>div{
+    position: relative;
+}
+.nav_bar .container>div>div>a>span{
     background-color: #44E054;
-    padding: 1px 8px;
+    padding: 0px 8px;
     color: white;
     border-radius: 10px;
-    font-size: 14px;
+    font-size: 12px;
+    position: absolute;
+    right: -18px;
+    top: 5px;
 }
 
 .nav_bar .container form{

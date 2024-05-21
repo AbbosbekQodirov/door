@@ -35,8 +35,10 @@ function Navbar() {
           </form>
           <div className="user_info">
             <div>
-              <img src="/imgs/icons/cart.svg" alt="" />
-              <span>2</span>
+              <Link to={"/basket"}>
+                <img src="/imgs/icons/cart.svg" alt="" />
+                <span>2</span>
+              </Link>
             </div>
             <div>
               <img src="/imgs/icons/like.svg" alt="" />

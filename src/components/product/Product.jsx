@@ -7,10 +7,10 @@ function Product() {
     <div className="product">
       <div className="product_img">
         <div className="like">
-          <img src="./imgs/icons/like2.svg" alt="" />
+          <img src="/imgs/icons/like2.svg" alt="" />
         </div>
-        <Link to={"/product/1"}>
-          <img src="./imgs/photos/product1.png" alt="" />
+        <Link to={"/product/2"}>
+          <img src="/imgs/photos/product1.png" alt="" />
         </Link>
       </div>
       <div className="product_info">
@@ -20,7 +20,7 @@ function Product() {
             <p>120x200 sm - 1 qanotli</p>
           </div>
           <div>
-            <img src="./imgs/icons/stars.svg" alt="" />
+            <img src="/imgs/icons/stars.svg" alt="" />
             <p className="comments">40 komment</p>
           </div>
         </div>
@@ -30,7 +30,7 @@ function Product() {
             1 000 000 so‘m <span>1 200 000 so‘m</span>
           </h2>
           <button>
-            <img src="./imgs/icons/cart2.svg" alt="" />
+            <img src="/imgs/icons/cart2.svg" alt="" />
           </button>
         </div>
       </div>

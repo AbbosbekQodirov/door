@@ -1,8 +1,11 @@
 import React, { useEffect } from 'react'
 import Filter from '../../components/filter/Filter'
-import "./Product.css"
+import "./OneProduct.css"
+import Title from '../../components/title/Title';
+import Product from '../../components/product/Product';
+import Customers from '../../components/customers/Customers';
 
-function Product() {
+function OneProduct() {
     useEffect(() => {
       window.scrollTo({
         top: 0,
@@ -77,9 +80,20 @@ function Product() {
             </div>
           </div>
         </div>
+        <Title title="Tavsiyalar" />
+        <div className="products">
+          {[1, 2, 3].map(() => {
+            return <Product />;
+          })}
+        </div>
+        <div className="read_more">
+          <a href="">Ko‘proq ko‘rish</a>
+        </div>
+        <Title title="Mijozlar fikri" />
+        <Customers />
       </div>
     </div>
   );
 }
 
-export default Product
+export default OneProduct

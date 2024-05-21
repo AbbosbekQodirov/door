@@ -2,6 +2,8 @@ import React, { useState } from 'react'
 import "./Home.css"
 import Title from '../../components/title/Title';
 import Filter from '../../components/filter/Filter';
+import Customers from '../../components/customers/Customers';
+import OneProduct from '../product/OneProduct';
 import Product from '../../components/product/Product';
 
 function Home() {
@@ -57,7 +59,7 @@ function Home() {
             <Filter />
             <div className="products">
               {products.map(() => {
-                return <Product />;
+                return <Product/>
               })}
             </div>
             <div className="read_more">
@@ -68,7 +70,7 @@ function Home() {
         <section>
           <div className="container">
             <Title title="Mijozlar fikri" />
-            
+            <Customers/>
           </div>
         </section>
       </main>
