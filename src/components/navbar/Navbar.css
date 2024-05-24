@@ -100,3 +100,6 @@
 .container_two{
     padding: 20px 30px !important;
 }
+.user_info>div{
+    cursor: pointer;
+}

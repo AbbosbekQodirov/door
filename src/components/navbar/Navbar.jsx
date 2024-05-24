@@ -1,10 +1,15 @@
-import React from 'react'
+import React, { useState } from 'react'
 import "./Navbar.css"
 import { Link } from 'react-router-dom';
+import Register from '../register/Register';
 
 function Navbar() {
+
+  const [showRegister, setShowRegister] = useState(false)
+
   return (
     <nav>
+      {showRegister && <Register setShowRegister={setShowRegister} /> }
       <div className="navbar">
         <div className="container">
           <div className="location">
@@ -43,7 +48,9 @@ function Navbar() {
             <div>
               <img src="/imgs/icons/like.svg" alt="" />
             </div>
-            <div>
+            <div onClick={()=>{
+              setShowRegister(true)
+            }} className="profile">
               <img src="/imgs/man.png" alt="" />
             </div>
           </div>
