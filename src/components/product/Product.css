@@ -3,6 +3,11 @@
     padding-top: 20px;
 }
 
+.product_img .product_main_img{
+    width: 80%;
+    display: flex;
+    margin: 0 auto;
+}
 .product{
     width: 380px;
     margin-bottom: 30px;

@@ -38,7 +38,7 @@ function Profile() {
                   <input value={"+998999999999"} type="text" />
                 </div>
               </div>
-            <button>Saqlash</button>
+              <button>Saqlash</button>
             </div>
           </div>
         </form>

@@ -1,0 +1,9 @@
+.admin_page{
+    display: flex;
+    justify-content: space-between;
+}
+
+.adminInfo{
+    width: 100%;
+    max-width: 920px;
+}

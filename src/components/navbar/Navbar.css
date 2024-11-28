@@ -103,3 +103,27 @@
 .user_info>div{
     cursor: pointer;
 }
+.profile{
+    position: relative;
+}
+
+.profile .user_login{
+    list-style: none;
+    font-size: 12px;
+    position: absolute;
+    right: -1px;
+    z-index: 9999;
+    background-color: #EDEEF2;
+    border-radius: 5px;
+    overflow: hidden;
+    border: 2px solid white;
+}
+.profile .user_login li{
+    padding: 4px;
+}
+
+.profile .user_login li:hover{
+    background-color: black;
+    color: white;
+    padding: 4px;
+}

@@ -20,7 +20,36 @@
     border: 2px solid rgba(0, 0, 0, 0);
     transition: all .3s ease;
     cursor: pointer;
+    position: relative;
 }
+
+
+.filter_brands{
+    position: absolute;
+    top: 40px;
+    left: -2px;
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    display: none;
+    transition: all .5s ease;
+    height: 0px;
+    overflow: hidden;
+    display: flex;
+    z-index: 99;
+}
+.filter ul li:hover .filter_brands{
+    height: 170px;
+}
+
+.filter_brands span{
+padding: 8px 6px;
+}
+.filter_brands span:hover{
+    background-color: black;
+    color: white;
+}
+
 .filter ul li.active{
 color: black;
     border-bottom: 2px solid black;

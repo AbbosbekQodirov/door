@@ -1,54 +1,27 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import "./Customers.css"
 
-function Customers() {
+function Customers({ comments }) {
+
   return (
     <div>
       <div className="container">
         <div className="customers">
           <div className="cusInfo">
-            <div className="custom">
-              <p>
-                “Just wanted to drop a note to say how impressed I was with your
-                customer service team. They solved my issue in no time and made
-                sure I was happy every step!”
-              </p>
-              <div>
-                <img src="/imgs/photos/custom1.png" alt="" />
-                <div>
-                  <h3>Alisher Valiyev</h3>
-                  <span>Usta</span>
+            {comments?.slice(0, 4).map((item) => {
+              return (
+                <div className="custom">
+                  <p>“{item.comment}”</p>
+                  <div>
+                    <img src="/imgs/photos/custom1.png" alt="" />
+                    <div>
+                      <h3>{item.username}</h3>
+                      <span>Usta</span>
+                    </div>
+                  </div>
                 </div>
-              </div>
-            </div>
-            <div className="custom active">
-              <p>
-                “Just wanted to drop a note to say how impressed I was with your
-                customer service team. They solved my issue in no time and made
-                sure I was happy every step!”
-              </p>
-              <div>
-                <img src="/imgs/icons/user1.svg" alt="" />
-                <div>
-                  <h3>Alisher Valiyev</h3>
-                  <span>Usta</span>
-                </div>
-              </div>
-            </div>
-            <div className="custom">
-              <p>
-                “Just wanted to drop a note to say how impressed I was with your
-                customer service team. They solved my issue in no time and made
-                sure I was happy every step!”
-              </p>
-              <div>
-                <img src="/imgs/photos/custom1.png" alt="" />
-                <div>
-                  <h3>Alisher Valiyev</h3>
-                  <span>Usta</span>
-                </div>
-              </div>
-            </div>
+              );
+            })}
           </div>
           <div className="cusImg">
             <img src="/imgs/photos/customImg1.png" alt="" />

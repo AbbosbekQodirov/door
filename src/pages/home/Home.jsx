@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import "./Home.css"
 import Title from '../../components/title/Title';
 import Filter from '../../components/filter/Filter';
@@ -6,8 +6,42 @@ import Customers from '../../components/customers/Customers';
 import OneProduct from '../product/OneProduct';
 import Product from '../../components/product/Product';
 
-function Home() {
-  const [products, setProducts] = useState([1,2,3,4,5,6])
+function Home({ allProduct, setProductLink }) {
+  const [collections, setCollections] = useState([]);
+  const [comments, setComments] = useState([]);
+  const getCollection = () => {
+    const requestOptions = {
+      method: "GET",
+      redirect: "follow",
+    };
+
+    fetch(`/api/v1/collections/`, requestOptions)
+      .then((response) => response.json())
+      .then((result) => {
+        setCollections(result);
+      })
+      .catch((error) => console.error(error));
+  };
+
+  const getComments = () => {
+    const requestOptions = {
+      method: "GET",
+      redirect: "follow",
+    };
+
+    fetch(`/api/v1/comments/`, requestOptions)
+      .then((response) => response.json())
+      .then((result) => {
+        setComments(result.results);
+      })
+      .catch((error) => console.error(error));
+  };
+
+  useEffect(() => {
+    getCollection();
+    getComments();
+  }, []);
+
   return (
     <div className="home">
       <div className="hero">
@@ -30,36 +64,24 @@ function Home() {
           <div className="container">
             <Title title={"Kolleksiyalar"} />
             <div className="collections">
-              <div className="col1">
-                <img src="./imgs/photos/col1.png" alt="" />
-                <div className="col_info">Oshxona uchun</div>
-              </div>
-              <div className="col2">
-                <img src="./imgs/photos/col2.png" alt="" />
-                <div className="col_info">Oshxona uchun</div>
-              </div>
-              <div className="col3">
-                <img src="./imgs/photos/col3.png" alt="" />
-                <div className="col_info">Oshxona uchun</div>
-              </div>
-              <div className="col4">
-                <img src="./imgs/photos/col4.png" alt="" />
-                <div className="col_info">Oshxona uchun</div>
-              </div>
-              <div className="col5">
-                <img src="./imgs/photos/col5.png" alt="" />
-                <div className="col_info">+30 Ko’proq ko’rish</div>
-              </div>
+              {collections?.map((item, index) => {
+                return (
+                  <div className={`col${index + 1}`}>
+                    <img src={item.photo} alt="" />
+                    <div className="col_info">{item.name}</div>
+                  </div>
+                );
+              })}
             </div>
           </div>
         </section>
         <section>
           <div className="container">
             <Title title={"Mahsulotlar"} />
-            <Filter />
+            <Filter setProductLink={setProductLink} />
             <div className="products">
-              {products.map(() => {
-                return <Product/>
+              {allProduct.map((product) => {
+                return <Product product={product} />;
               })}
             </div>
             <div className="read_more">
@@ -70,7 +92,7 @@ function Home() {
         <section>
           <div className="container">
             <Title title="Mijozlar fikri" />
-            <Customers/>
+            <Customers comments={comments} />
           </div>
         </section>
       </main>

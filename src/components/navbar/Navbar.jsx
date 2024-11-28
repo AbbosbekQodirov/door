@@ -1,15 +1,16 @@
-import React, { useState } from 'react'
-import "./Navbar.css"
-import { Link } from 'react-router-dom';
-import Register from '../register/Register';
+import React, { useState } from "react";
+import "./Navbar.css";
+import { Link, useNavigate } from "react-router-dom";
+import Register from "../register/Register";
 
 function Navbar() {
-
-  const [showRegister, setShowRegister] = useState(false)
+  const [showRegister, setShowRegister] = useState(false);
+  const [showLoginBar, setShowLoginBar] = useState(false);
+  const navigate = useNavigate()
 
   return (
     <nav>
-      {showRegister && <Register setShowRegister={setShowRegister} /> }
+      {showRegister && <Register setShowRegister={setShowRegister} />}
       <div className="navbar">
         <div className="container">
           <div className="location">
@@ -48,10 +49,31 @@ function Navbar() {
             <div>
               <img src="/imgs/icons/like.svg" alt="" />
             </div>
-            <div onClick={()=>{
-              setShowRegister(true)
-            }} className="profile">
+            <div
+              onClick={() => {
+                setShowLoginBar(!showLoginBar);
+              }}
+              className="profile"
+            >
               <img src="/imgs/man.png" alt="" />
+              { showLoginBar &&
+                <ul className="user_login">
+                  <li
+                    onClick={() => {
+                      setShowRegister(true);
+                    }}
+                  >
+                    Ro'yhatdan o'tish
+                  </li>
+                  <li>Kirish</li>
+                  <li onClick={()=>{
+                    navigate("/login")
+                    setTimeout(() => {
+                      setShowLoginBar(false);
+                    }, 100);
+                  }} >Admin</li>
+                </ul>
+              }
             </div>
           </div>
         </div>
@@ -60,4 +82,4 @@ function Navbar() {
   );
 }
 
-export default Navbar
+export default Navbar;

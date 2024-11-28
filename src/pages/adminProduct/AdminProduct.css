@@ -1,0 +1,157 @@
+.adminProducts {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    max-height: 88vh !important;
+    overflow-y: auto;
+    padding-right: 10px;
+    padding: 30px;
+    position: relative;
+}
+
+.adminProducts::-webkit-scrollbar {
+    width: 4px;
+    background-color: #BBBBBB;
+}
+
+.adminProducts::-webkit-scrollbar-thumb {
+    background-color: black;
+}
+
+.adminProduct {
+    display: flex;
+    align-items: center;
+    border: 1px solid #D9D9D9;
+    padding: 10px;
+    border-radius: 8px;
+    width: 400px;
+    gap: 20px;
+    position: relative;
+}
+
+.adminProduct .admin_productimg {
+    border-radius: 8px;
+    background-color: #EDEEF2;
+    width: 140px;
+    height: 140px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+}
+
+.admin_productimg img {
+    width: 100%;
+}
+
+.adminProduct p {
+    font-size: 12px;
+    color: #6D6D6D;
+    line-height: 20px;
+}
+
+.adminProduct h3 {
+    margin: 10px 0px;
+}
+
+.adminProduct p span {
+    color: black;
+    font-weight: 600;
+    margin-left: 10px;
+}
+
+.admin_edit{
+    position: absolute;
+    top: 10px;
+    right: 40px;
+    width: 20px;
+    height: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #BEBEBE;
+    border-radius: 4px;
+    color: #3D3D3D;
+    cursor: pointer;
+}
+
+
+.admin_delete {
+    cursor: pointer;
+    color: #3D3D3D;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 20px;
+    height: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #BEBEBE;
+    border-radius: 4px;
+}
+
+.admin_addProductBtn{
+    position: fixed;
+    bottom: 10px;
+    right: 30px;
+    background-color: black;
+    width: 64px;
+    height: 64px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 99;
+    color: white;
+    border-radius: 50%;
+    font-size: 35px;
+    cursor: pointer;
+}
+
+.addModal{
+    position: fixed;
+    bottom: 10px;
+    right: -500px;
+    background-color: white;
+    width: 300px;
+    padding: 10px 20px;
+    border-radius: 8px;
+    border: 2px solid black;
+    transition: all .3s ease;
+}
+.addModal.active{
+    right: 100px;
+}
+
+.addModal h2{
+    font-size: 20px;
+    text-align: center;
+    margin-bottom: 14px;
+}
+
+.addModal form{
+    display: flex;
+    flex-direction: column;
+}
+
+.addModal form  label{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+}
+
+.addModal form label input,.addModal form label select {
+    font-size: 14px;
+    padding: 10px;
+    border-radius: 6px;
+    border: 1px solid #E4E4E4;
+    outline: none;
+}
+
+.addModal form button{
+    background-color: black;
+    color: white;
+    border: none;
+    padding: 8px 0px;
+    border-radius: 5px;
+}
